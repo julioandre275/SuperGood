@@ -29,7 +29,9 @@ app.get("/",function(req,res){
  app.get("/start/home",function(req,res){
      res.render("supergood2")
  });
-
+app.get("start/home/soul",function(req,res){
+  res.render("supergood3");
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
