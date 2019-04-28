@@ -6,10 +6,11 @@
     "configurations": [
         
         {
-            "name": "Docker: Attach to Node",
             "type": "node",
-            "request": "attach",
-            "remoteRoot": "/usr/src/app"
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "C:\\Users\\julio\\SuperGood\\bin\\www"
+        
         }
     ]
 }
