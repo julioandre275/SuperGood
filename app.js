@@ -11,7 +11,8 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'jade');
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -26,12 +27,16 @@ app.get("/",function(req,res){
      res.render("supergood");
  });
  
- app.get("/start/home",function(req,res){
-     res.render("supergood2")
- });
-app.get("start/home/soul",function(req,res){
-  res.render("supergood3");
+app.get("/start/home",function(req,res){
+    res.render("supergood2")
 });
+app.get("/start/home/soul",function(req,res){
+    res.render("supergood3");
+});
+app.get("/start/home/colgost",function(req,res){
+    res.render("supergood4");
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
